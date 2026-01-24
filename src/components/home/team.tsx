@@ -7,7 +7,7 @@ import { Linkedin, Github, Mail, ArrowLeft, ArrowRight } from "lucide-react"
 const team = [
   {
     name: "Abhijeet Jha",
-    role: "COO,
+    role: "COO",
     description:
       "Passionate about developing AI-driven solutions to solve real-world problems.",
     image: "https://avatars.githubusercontent.com/u/169458770?v=4",
