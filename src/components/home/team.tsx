@@ -21,7 +21,7 @@ const team = [
     name: "Roshan Kumar",
     role: "CTO",
     description: "Leading technology strategy and development for innovative solutions.",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQEerfrG1EolXw/profile-displayphoto-scale_400_400/B56ZrvJTJvHIAk-/0/1764948784756?e=1770854400&v=beta&t=5zzTR3XqDhICWdVVyiifnm8mmuU87CZRKiQlhiajC1g",
+    image: "/roshan.png",
     socials: [
       // { icon: Linkedin, url: "#", label: "LinkedIn" },
       // { icon: Github, url: "https://github.com/roshancodespace", label: "GitHub" },
