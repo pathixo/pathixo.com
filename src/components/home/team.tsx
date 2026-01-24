@@ -19,7 +19,7 @@ const team = [
   },
   {
     name: "Roshan Kumar",
-    role: "Co-founder & CTO",
+    role: "CTO",
     description: "Leading technology strategy and development for innovative solutions.",
     image: "/roshan.png",
     socials: [

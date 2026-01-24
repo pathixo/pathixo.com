@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Figtree, Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navigation";
@@ -22,6 +22,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://pathixo.com'),
   title: "Pathixo - Web Development, Android & SEO Services",
   description: "Pathixo delivers comprehensive IT solutions including web development, Android app development, and SEO optimization services to help your business grow online.",
   keywords: [
@@ -37,6 +38,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Pathixo" }],
   creator: "Pathixo",
   publisher: "Pathixo",
+  manifest: '/site.webmanifest',
   robots: {
     index: true,
     follow: true,
@@ -51,23 +53,33 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
+    url: 'https://pathixo.com',
     title: "Pathixo - Web Development, Android & SEO Services",
     description: "Pathixo delivers comprehensive IT solutions including web development, Android app development, and SEO optimization services to help your business grow online.",
     siteName: "Pathixo",
+    images: [{
+      url: '/image.png',
+      width: 800,
+      height: 600,
+      alt: 'Pathixo Logo',
+    }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Pathixo - Web Development, Android & SEO Services",
     description: "Pathixo delivers comprehensive IT solutions including web development, Android app development, and SEO optimization services.",
     creator: "@pathixo",
+    images: ['/image.png'],
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
+
   verification: {
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
@@ -82,7 +94,7 @@ export default function RootLayout({
       >
         <Navigation />
         {children}
-        <Toaster/>
+        <Toaster />
       </body>
     </html>
   );
