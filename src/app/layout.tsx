@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   other: {
     "google-site-verification": "Pathixo Private Limited", 
   },
-  authors: [{ name: "Pathixo Pvt. Ltd." }],
-  creator: "Pathixo Pvt. Ltd.",
-  publisher: "Pathixo Pvt. Ltd.",
+  authors: [{ name: "Pathixo Private Limited" }],
+  creator: "Pathixo Private Limited",
+  publisher: "Pathixo Private Limited",
   manifest: '/site.webmanifest',
   robots: {
     index: true,
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     url: 'https://pathixo.com',
     title: "Pathixo - Web Development, Android & SEO Services",
     description: "Pathixo delivers comprehensive IT solutions including web development, Android app development, and SEO optimization services to help your business grow online.",
-    siteName: "Pathixo",
+    siteName: "Pathixo Private Limited",
     images: [{
       url: '/image.png',
       width: 800,
