@@ -35,9 +35,12 @@ export const metadata: Metadata = {
     "website design",
     "search engine optimization"
   ],
-  authors: [{ name: "Pathixo" }],
-  creator: "Pathixo",
-  publisher: "Pathixo",
+  other: {
+    "google-site-verification": "Pathixo Private Limited", 
+  },
+  authors: [{ name: "Pathixo Pvt. Ltd." }],
+  creator: "Pathixo Pvt. Ltd.",
+  publisher: "Pathixo Pvt. Ltd.",
   manifest: '/site.webmanifest',
   robots: {
     index: true,
@@ -89,6 +92,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Pathixo Private Limited",
+              "url": "https://pathixo.com"
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${figtree.className} ${poppins.variable} ${montserrat.variable} bg-[#060016] text-white min-h-screen max-w-screen overflow-x-hidden`}
       >
