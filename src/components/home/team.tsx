@@ -50,6 +50,17 @@ const team = [
       // { icon: Mail, url: "mailto:nitish@pathixo.com", label: "Email" },
     ],
   },
+    {
+    name: "Vijay Jha",
+    role: "Director",
+    description:
+      "",
+    image: "/vjha.png",
+    socials: [
+      // { icon: Linkedin, url: "#", label: "LinkedIn" },
+      // { icon: Mail, url: "mailto:nitish@pathixo.com", label: "Email" },
+    ],
+  },
   {
     name: "Ankit Kumar",
     role: "Devops Engineer",
@@ -106,7 +117,7 @@ export default function MeetTheTeam() {
           <h2 className="text-sm uppercase tracking-widest text-zinc-400 mb-4">
             Team Section
           </h2>
-          <p className="text-4xl md:text-5xl font-bold">Meet the team</p>
+          <p className="text-4xl md:text-5xl font-bold">Meet the best team</p>
         </div>
 
         <div className="relative h-72 flex items-center justify-center">
