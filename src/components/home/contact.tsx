@@ -7,7 +7,7 @@ import { Linkedin, Github, Twitter, Mail, Phone, Loader2, Check, Instagram } fro
 const socialLinks = [
   { icon: Instagram, url: "https://www.instagram.com/pathixo_?igsh=N21vb2ZrMmQxNHNs" },
   { icon: Linkedin, url: "https://www.linkedin.com/company/pathixopvtltd" },
-  { icon: Github, url: "https://github.com/mallsurf-packages" },
+  { icon: Github, url: "https://github.com/pathixo" },
 ]
 
 export default function ContactUs() {
