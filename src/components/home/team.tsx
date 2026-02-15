@@ -55,7 +55,7 @@ const team = [
     role: "Director",
     description:
       "",
-    image: "/vjha.png",
+    image: "/vjha.jpg",
     socials: [
       // { icon: Linkedin, url: "#", label: "LinkedIn" },
       // { icon: Mail, url: "mailto:nitish@pathixo.com", label: "Email" },
