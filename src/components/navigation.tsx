@@ -90,12 +90,12 @@ function Navigation() {
                     <Link href="/careers" className="mx-3 text-sm text-primary hover:text-primary transition-colors">
                         Careers
                     </Link>
-                    <Link
+                    {/* <Link
                         href="https://edu.pathixo.com"
                         className="ml-4 px-4 py-2 text-sm font-medium bg-white text-black rounded-full hover:bg-gray-200 transition-all"
                     >
                         Courses
-                    </Link>
+                    </Link> */}
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -168,7 +168,7 @@ function Navigation() {
                 <div className="my-8 border-t border-white/10"></div>
 
                 {/* Courses CTA */}
-                <div className="mt-auto">
+                {/* <div className="mt-auto">
                     <Link
                         onClick={() => setOpen(false)}
                         href="https://edu.pathixo.com"
@@ -188,7 +188,7 @@ function Navigation() {
                     <div className="mt-8 text-center">
                         <p className="text-xs text-gray-500">© {new Date().getFullYear()} Pathixo. All rights reserved.</p>
                     </div>
-                </div>
+                </div>*/}
             </div>
 
             {/* Backdrop for Mobile Menu */}
