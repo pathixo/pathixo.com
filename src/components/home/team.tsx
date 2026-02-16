@@ -73,7 +73,7 @@ export default function MeetTheTeam() {
   const activeMember = team[activeIndex]
 
   return (
-    <section className="relative min-h-screen bg-black text-white flex items-center py-24">
+    <section className="relative min-h-screen max-w-screen overflow-x-clip bg-black text-white flex items-center py-24">
       <div className="max-w-6xl mx-auto px-6 w-full">
 
         {/* Heading */}
