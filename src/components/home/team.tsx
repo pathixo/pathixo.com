@@ -45,13 +45,13 @@ const team = [
       "Specializing in cloud infrastructure, CI/CD pipelines, and system reliability.",
     image: "/ankit.png",
   },
-  {
-    name: "Kartik Singh",
-    role: "UI/UX Designer",
-    description:
-      "Crafting intuitive and engaging user experiences through innovative design.",
-    image: "/om.png",
-  },
+  // {
+  //   name: "Kartik Singh",
+  //   role: "UI/UX Designer",
+  //   description:
+  //     "Crafting intuitive and engaging user experiences through innovative design.",
+  //   image: "/om.png",
+  // },
 ]
 
 const AUTO_INTERVAL = 5000
