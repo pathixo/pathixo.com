@@ -58,7 +58,7 @@ export default function WhyChooseUs() {
               ${idx == 2 && "row-start-2 col-span-2 col-start-2"}`}
             >
               <div className="flex items-center gap-4">
-                <div className="p-4 rounded-full bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 flex items-center justify-center">
+                <div className="p-4 rounded-full bg-linear-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 flex items-center justify-center">
                   <reason.icon className="w-6 h-6 text-purple-400 group-hover:text-indigo-400 transition-colors" />
                 </div>
                 <h3 className="text-2xl font-bold">{reason.title}</h3>

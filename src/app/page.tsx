@@ -21,7 +21,7 @@ export default function Home() {
       <div className="w-screen min-h-screen" />
 
       <div className="relative z-10 bg-zinc-950 rounded-t-[2em]">
-        <div className="rounded-t-[2.5em] -mt-[2rem]">
+        <div className="rounded-t-[2.5em] -mt-8">
           {/* Problems Section */}
           <Problems />
 

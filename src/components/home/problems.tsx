@@ -42,7 +42,7 @@ export function Problems() {
             className="mt-6 space-y-4"
           >
             <div className="flex items-start gap-3">
-              <div className="w-9 h-9 rounded-full bg-purple-500/20 border border-purple-500/40 flex items-center justify-center font-semibold text-purple-400">1</div>
+              <div className="w-9 h-9 rounded-full bg-purple-500/20 border border-purple-500/40 flex items-center justify-center font-semibold text-purple-400 min-w-9">1</div>
               <div>
                 <div className="font-semibold text-white">One trusted partner</div>
                 <div className="text-sm text-zinc-400">Web, mobile, and cloud — handled under one roof.</div>
@@ -50,7 +50,7 @@ export function Problems() {
             </div>
 
             <div className="flex items-start gap-3">
-              <div className="w-9 h-9 rounded-full bg-purple-500/20 border border-purple-500/40 flex items-center justify-center font-semibold text-purple-400">2</div>
+              <div className="w-9 h-9 rounded-full bg-purple-500/20 border border-purple-500/40 flex items-center justify-center font-semibold text-purple-400  min-w-9">2</div>
               <div>
                 <div className="font-semibold text-white">Launch without delays</div>
                 <div className="text-sm text-zinc-400">Battle-tested stacks and delivery pipelines for faster time to market.</div>
@@ -58,7 +58,7 @@ export function Problems() {
             </div>
 
             <div className="flex items-start gap-3">
-              <div className="w-9 h-9 rounded-full bg-purple-500/20 border border-purple-500/40 flex items-center justify-center font-semibold text-purple-400">3</div>
+              <div className="w-9 h-9 rounded-full bg-purple-500/20 border border-purple-500/40 flex items-center justify-center font-semibold text-purple-400  min-w-9">3</div>
               <div>
                 <div className="font-semibold text-white">Scale with confidence</div>
                 <div className="text-sm text-zinc-400">Cloud-native patterns, monitoring, and SLAs that keep systems reliable.</div>
