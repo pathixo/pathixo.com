@@ -15,13 +15,23 @@ import { techLogos } from "@/data/home";
 export default function Home() {
   return (
     <div className="relative bg-zinc-950 min-h-screen text-white">
+        {/* Background Noise Images */}
+            <div className="sticky inset-0 w-screen h-screen z-0 pointer-events-none opacity-50">
+                <img 
+                    src="/lb-noise.webp" 
+                    alt="" 
+                    className="hidden md:block object-cover w-full h-full" 
+                />
+                <img 
+                    src="/mb-noise.webp" 
+                    alt="" 
+                    className="block md:hidden object-cover w-full h-full" 
+                />
+            </div>
       <Hero />
 
-      {/* Spacer so hero doesn't crash into next */}
-      <div className="w-screen min-h-screen" />
-
-      <div className="relative z-10 bg-zinc-950 rounded-t-[2em]">
-        <div className="rounded-t-[2.5em] -mt-8">
+      <div className="relative z-10 bg-zinc-950 rounded-t-[2em] -mt-5">
+        <div className="rounded-t-[2.5em]">
           {/* Problems Section */}
           <Problems />
 

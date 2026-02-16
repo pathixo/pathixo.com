@@ -106,8 +106,9 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${figtree.className} ${poppins.variable} ${montserrat.variable} bg-[#060016] text-white min-h-screen max-w-screen overflow-x-hidden`}
+        className={`${figtree.className} ${poppins.variable} ${montserrat.variable}  text-white min-h-screen max-w-screen overflow-x-hidden`}
       >
+        
         <Navigation />
         {children}
         <Toaster />

@@ -7,21 +7,7 @@ import Link from 'next/link'
 
 export function Hero() {
     return (
-        <section className="fixed  top-0 z-0 w-screen flex items-center justify-center overflow-hidden bg-slate-950">
-            {/* Background Noise Images */}
-            <div className="absolute inset-0 w-screen h-full -z-10 pointer-events-none opacity-60">
-                <img 
-                    src="/lb-noise.webp" 
-                    alt="" 
-                    className="hidden md:block object-cover w-full h-full" 
-                />
-                <img 
-                    src="/mb-noise.webp" 
-                    alt="" 
-                    className="block md:hidden object-cover w-full h-full" 
-                />
-            </div>
-
+        <section className="fixed  top-0 z-0 w-screen flex items-center justify-center overflow-hidden">
             {/* Content Container */}
             <div className="relative h-screen mt-[25vh] flex flex-col items-center text-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 w-full max-w-7xl mx-auto z-10">
                 
@@ -33,8 +19,8 @@ export function Hero() {
                         <span className="tracking-tight">Smarter</span>
                         
                         {/* Rotating Text Container - Fully Responsive */}
-                        <span className="relative inline-flex justify-center items-center h-[1.2em] w-[180px] xs:w-[200px] sm:w-[240px] md:w-[280px] lg:w-[320px] xl:w-[360px] overflow-hidden rounded-full mx-1 sm:mx-2">
-                            <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-90" />
+                        <span className="relative inline-flex justify-center items-center h-[1.2em] w-45 xs:w-[200px] sm:w-[240px] md:w-[280px] lg:w-[320px] xl:w-[360px] overflow-hidden rounded-full mx-1 sm:mx-2">
+                            <span className="absolute inset-0 bg-linear-to-r from-purple-600 to-blue-600 opacity-90" />
                             <div className="relative z-10 flex items-center justify-center w-full h-full">
                                 <RotatingText
                                     texts={['Web', 'Digital', 'SaaS', 'Mobile', 'Cloud']}
