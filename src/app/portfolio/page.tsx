@@ -1,14 +1,42 @@
-"use client"
-
-import React, { useState } from "react"
 import { Layers, Percent, Store } from "lucide-react"
-import Modal from "@/components/modal"
+import { WaitlistCTA } from "@/components/portfolio/waitlist-cta"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Our Work & Projects",
+  description: "Explore the innovative digital solutions, web applications, and mobile apps Pathixo has built for clients worldwide.",
+  alternates: {
+    canonical: "https://pathixo.com/portfolio",
+  },
+  openGraph: {
+    title: "Our Work & Projects | Pathixo",
+    description: "Explore the innovative digital solutions, web applications, and mobile apps Pathixo has built for clients worldwide.",
+    url: "https://pathixo.com/portfolio",
+    siteName: "Pathixo",
+    type: "website",
+  }
+}
 
 export default function PortfolioPage() {
-  const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
     <div className="min-h-screen bg-black text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Pathixo Portfolio",
+            "description": "Explore the innovative digital solutions, web applications, and mobile apps Pathixo has built for clients worldwide.",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Pathixo"
+            }
+          }),
+        }}
+      />
+
       {/* HERO SECTION */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-dot-white/[0.06] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
@@ -32,12 +60,7 @@ export default function PortfolioPage() {
             Reimagining the physical mall experience.
           </p>
 
-          <button
-            onClick={() => setIsModalOpen(true)}
-            className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20"
-          >
-            Join the Waitlist
-          </button>
+          <WaitlistCTA />
         </div>
       </div>
 
@@ -75,49 +98,12 @@ export default function PortfolioPage() {
         <div className="border-t border-gray-800" />
       </div>
       <div className="text-center py-24">
-        <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+        <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
           Our Other Work
-        </h3>
+        </h2>
         <p className="text-gray-500 text-lg">More groundbreaking projects coming soon...</p>
       </div>
 
-      {/* MODAL FOR WAITLIST */}
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <h2 className="text-2xl font-semibold mb-4 text-center">Join the Waitlist</h2>
-        <p className="text-gray-400 text-center mb-6">
-          Be the first to know when Mallsurf launches.
-        </p>
-        <form
-          action="https://formspree.io/f/movykned"
-          method="POST"
-          onSubmit={(e) => {
-            alert("Thank you for joining the waitlist! 🚀")
-            setIsModalOpen(false)
-          }}
-          className="space-y-4"
-        >
-          <input
-            name="name"
-            type="text"
-            placeholder="Your Name"
-            className="w-full px-4 py-3 rounded-lg bg-zinc-800 border border-zinc-700 focus:border-purple-500 outline-none transition"
-            required
-          />
-          <input
-            name="email"
-            type="email"
-            placeholder="Your Email"
-            className="w-full px-4 py-3 rounded-lg bg-zinc-800 border border-zinc-700 focus:border-purple-500 outline-none transition"
-            required
-          />
-          <button
-            type="submit"
-            className="w-full bg-gradient-to-r from-purple-500 to-pink-500 py-3 rounded-lg font-semibold transition-transform hover:scale-105"
-          >
-            Join Now
-          </button>
-        </form>
-      </Modal>
     </div>
   )
 }

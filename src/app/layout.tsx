@@ -23,7 +23,10 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://pathixo.com'),
-  title: "Pathixo - Web Development, Android & SEO Services",
+  title: {
+    default: "Pathixo - Web Development, Android & SEO Services",
+    template: "%s | Pathixo",
+  },
   description: "Pathixo delivers comprehensive IT solutions including web development, Android app development, and SEO optimization services to help your business grow online.",
   keywords: [
     "web development",
@@ -36,7 +39,7 @@ export const metadata: Metadata = {
     "search engine optimization"
   ],
   other: {
-    "google-site-verification": "Pathixo Private Limited", 
+    "google-site-verification": "Pathixo Private Limited",
   },
   authors: [{ name: "Pathixo Private Limited" }],
   creator: "Pathixo Private Limited",
@@ -108,7 +111,7 @@ export default function RootLayout({
       <body
         className={`${figtree.className} ${poppins.variable} ${montserrat.variable}  text-white min-h-screen max-w-screen overflow-x-hidden`}
       >
-        
+
         <Navigation />
         {children}
         <Toaster />

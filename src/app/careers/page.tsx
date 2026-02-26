@@ -17,10 +17,41 @@ import {
   Coffee,
 } from "lucide-react"
 import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Careers",
+  description: "Join the Pathixo team. Explore exciting career opportunities in web development, mobile apps, and IT solutions.",
+  alternates: {
+    canonical: "https://pathixo.com/careers",
+  },
+  openGraph: {
+    title: "Careers | Pathixo",
+    description: "Join the Pathixo team. Explore exciting career opportunities in web development, mobile apps, and IT solutions.",
+    url: "https://pathixo.com/careers",
+    siteName: "Pathixo",
+    type: "website",
+  }
+}
 
 export default function CareersPage() {
   return (
     <main className="min-h-screen bg-background relative overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Pathixo Careers",
+            "description": "Join the Pathixo team. Explore exciting career opportunities in web development, mobile apps, and IT solutions.",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Pathixo"
+            }
+          }),
+        }}
+      />
       {/* Background gradient effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px]" />

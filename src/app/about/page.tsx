@@ -1,8 +1,5 @@
-// /app/about/page.tsx
-"use client";
-
-import React, { useState } from "react";
-import { motion } from "motion/react";
+import React from "react";
+import type { Metadata } from "next";
 import {
     Lightbulb,
     Gem,
@@ -14,10 +11,21 @@ import {
     CheckCircle,
     Code,
 } from "lucide-react";
-import Modal from "@/components/modal";
-import { ProjectContactForm } from "@/components/project-consultation-form";
 import { Footer } from "@/components/home/footer";
-import Link from "next/link";
+import { ProjectStartCTA } from "@/components/about/project-start-cta";
+import { ScrollIndicator } from "@/components/about/scroll-indicator";
+
+export const metadata: Metadata = {
+    title: "About Us",
+    description: "Learn about Pathixo, our mission, values, and the expert team behind our web and mobile development solutions.",
+    openGraph: {
+        title: "About Us | Pathixo",
+        description: "Learn about Pathixo, our mission, values, and the expert team behind our web and mobile development solutions.",
+        url: "https://pathixo.com/about",
+        siteName: "Pathixo",
+        type: "website",
+    }
+};
 
 // --- Type Definitions ---
 interface StatProps {
@@ -93,8 +101,6 @@ const TECH_STACK = [
 ];
 
 export default function AboutPage() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
     return (
         <>
             <div className="min-h-screen bg-black text-white overflow-x-hidden">
@@ -127,16 +133,24 @@ export default function AboutPage() {
                         </div>
                     </div>
 
-                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-                        <div className="w-6 h-10 border-2 border-purple-500/50 rounded-full flex items-start justify-center p-2">
-                            <motion.div
-                                className="w-1 h-3 bg-purple-500 rounded-full"
-                                animate={{ y: [0, 8, 0] }}
-                                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                            />
-                        </div>
-                    </div>
+                    <ScrollIndicator />
                 </section>
+
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "AboutPage",
+                            "name": "About Pathixo",
+                            "description": "Pathixo is a small, sharp team of engineers and designers shipping fast, reliable, and beautiful digital experiences.",
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "Pathixo"
+                            }
+                        }),
+                    }}
+                />
 
                 {/* Consistent Page Wrapper */}
                 <div className="space-y-32 md:space-y-40 py-32 md:py-40">
@@ -217,26 +231,13 @@ export default function AboutPage() {
                                 <p className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto">
                                     If you want clean engineering, honest communication, and a team that actually delivers — we’re ready.
                                 </p>
-                                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                    <button
-                                        onClick={() => setIsModalOpen(true)}
-                                        className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full font-semibold text-lg overflow-hidden transition-transform hover:scale-105"
-                                    >
-                                        <span className="relative z-10">Start Your Project</span>
-                                    </button>
-                                    <Link href="/portfolio" className="px-8 py-4 border-2 border-purple-500/50 rounded-full font-semibold text-lg hover:bg-purple-500/10 hover:border-purple-500 transition-all">
-                                        View Our Work
-                                    </Link>
-                                </div>
+                                <ProjectStartCTA />
                             </div>
                         </div>
                     </section>
                 </div>
             </div>
             <Footer />
-            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-                <ProjectContactForm />
-            </Modal>
         </>
     );
 }
@@ -273,7 +274,7 @@ const ValueCard: React.FC<ValueCardProps> = ({ icon, title, description }) => (
             <div className="mb-6 text-purple-400 transition-transform group-hover:scale-110 w-10 h-10 flex items-center justify-center rounded-lg bg-white/5">
                 {icon}
             </div>
-            <h3 className="text-2xl font-bold mb-4">{title}</h3>
+            <h3 className="text-xl font-bold mb-4">{title}</h3>
             <p className="text-gray-400 leading-relaxed">{description}</p>
         </div>
     </div>
