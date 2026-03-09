@@ -8,7 +8,7 @@ const socialLinks = [
   { icon: Linkedin, url: "https://www.linkedin.com/company/pathixopvtltd", label: "LinkedIn" },
   { icon: Github, url: "https://github.com/pathixo", label: "GitHub" },
   // { icon: Twitter, url: "#", label: "Twitter" },
-  { icon: Instagram, url: "https://www.instagram.com/pathixo_?igsh=N21vb2ZrMmQxNHNs", label: "Instagram" },
+  { icon: Instagram, url: "https://www.instagram.com/pathixopvtltd", label: "Instagram" },
   { icon: Mail, url: "mailto:founder@pathixo.com", label: "Email" },
 ];
 
