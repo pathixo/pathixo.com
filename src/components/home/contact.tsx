@@ -66,7 +66,7 @@ export default function ContactUs() {
               <Mail className="w-6 h-6 text-purple-400" />
               <span className="text-white font-medium group-hover:text-purple-300 transition-colors">founder@pathixo.com</span>
             </a>
-            <a href="tel:+918877020121" className="flex items-center gap-4 group">
+            <a href="tel:+919711015569" className="flex items-center gap-4 group">
               <Phone className="w-6 h-6 text-blue-400" />
               <span className="text-white font-medium group-hover:text-blue-300 transition-colors">+91 8877 020 121</span>
             </a>
