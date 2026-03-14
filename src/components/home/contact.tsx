@@ -68,7 +68,7 @@ export default function ContactUs() {
             </a>
             <a href="tel:+919711015569" className="flex items-center gap-4 group">
               <Phone className="w-6 h-6 text-blue-400" />
-              <span className="text-white font-medium group-hover:text-blue-300 transition-colors">+91 8877 020 121</span>
+              <span className="text-white font-medium group-hover:text-blue-300 transition-colors">+91 9711015569</span>
             </a>
           </motion.div>
           <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.5 }} className="flex gap-4 pt-4">
