@@ -89,8 +89,8 @@ export function Footer({ reqConsultation = false }: { reqConsultation?: boolean 
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+918877020121" className="hover:text-purple-400 transition-colors duration-300">
-                    +91 8877 020 121
+                  <a href="tel:+919711015569" className="hover:text-purple-400 transition-colors duration-300">
+                    +91 9711015569
                   </a>
                 </li>
               </ul>
